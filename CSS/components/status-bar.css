@@ -1,0 +1,39 @@
+.status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* width:100% 와 동일 */
+  height: 28px; /* 원하는 높이 */
+  display: flex; /* 가로 배치 핵심 */
+  justify-content: space-between;
+  align-items: center; /* 세로 가운데 정렬 */
+  padding: 0 8px; /* 좌우 여백 */
+  box-sizing: border-box;
+  background: #fff; /* 뒷내용과 겹침 방지 */
+  z-index: 1000;
+  margin-bottom: 0; /* 혹시 margin이 들어가 있다면 제거 */
+  padding-bottom: 0; /* 필요하면 padding도 조정 */
+}
+
+.status-bar__column {
+  width: 33%;
+}
+
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.status-bar__column .fa-battery-full {
+  margin: 7px 3px;
+}
+
+.status-bar.chat {
+  background-color: #abc1d1;
+}
